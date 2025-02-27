@@ -16,7 +16,7 @@ export default function Login() {
         </div>
 
         <div>
-          <h1>2</h1>
+          <h1>3</h1>
         </div>
       </div>
     </section>
