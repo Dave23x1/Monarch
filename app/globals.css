@@ -22,18 +22,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-@keyframes windWaveDown {
-  0% { transform: translateY(0) rotate(0deg) skewY(0deg); }
-  25% { transform: translateY(5px) rotate(1deg) skewY(2deg); }
-  50% { transform: translateY(10px) rotate(0deg) skewY(0deg); }
-  75% { transform: translateY(5px) rotate(-1deg) skewY(-2deg); }
-  100% { transform: translateY(0) rotate(0deg) skewY(0deg); }
+@keyframes gentleWave {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-.animate-wind-wave-down {
-  animation: windWaveDown 4s infinite ease-in-out;
+.wave-effect {
+  animation: gentleWave 4s infinite ease-in-out;
+  filter: url(#waveFilter);
 }
 
-.wind-down-effect {
-  transform-origin: center;
+/* SVG Wave Filter */
+.svg-filters {
+  width: 0;
+  height: 0;
 }
