@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Login() {
   return (
     <section className="bg-[#2F2F2F] w-full h-screen ">
-      <div className="flex ">
+      <div className="flex justify-center container mx-auto gap-[130px]">
         <div className="">
           <div className="absolute">
             <Image
@@ -24,8 +24,10 @@ export default function Login() {
           </div>
         </div>
 
-        <div>
-          <h1>3</h1>
+        <div className="border-2 border-[#7A7A7A] rounded-lg">
+          <h1>Log in ti your account</h1>
+          <p>Don't have an account? Sign Up</p>
+          <form></form>
         </div>
       </div>
     </section>
