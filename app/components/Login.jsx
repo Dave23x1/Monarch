@@ -1,5 +1,9 @@
+// filepath: /home/halcyon-pc/Desktop/Dave Projects/Monarch/app/components/Login.jsx
+"use client";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
-export default function Login() {
+
+export default function SignIn() {
   return (
     <section className="bg-[#2F2F2F] w-full min-h-screen">
       <div className="flex gap-[50px] container mx-auto justify-center items-center pt-[50px]">
@@ -24,7 +28,12 @@ export default function Login() {
             </div>
             <div className="my-[40px] ">
               <div className=" flex pt-[30px] justify-center ">
-                <div className="bg-[#1E1E1E] py-[5px] w-[140px] rounded-lg  border-[#7a7a7a] border cursor-pointer">
+                <div
+                  className="bg-[#1E1E1E] py-[5px] w-[140px] rounded-lg  border-[#7a7a7a] border cursor-pointer"
+                  onClick={() =>
+                    signIn("google", { callbackUrl: "/" })
+                  }
+                >
                   <div className="flex items-center gap-[10px] px-[15px]">
                     <Image
                       src="/icons/Google.png"
